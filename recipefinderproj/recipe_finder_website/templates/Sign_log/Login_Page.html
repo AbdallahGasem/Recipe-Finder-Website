@@ -1,0 +1,28 @@
+<html>
+    <head>
+        {% load static %}
+        <link href="{% static 'CSS/login.css' %}" rel="stylesheet">
+        <meta name="discription" content="Welcome to the Number1 Recipe Finder website">
+    </head>
+    <body>
+        <div class="box">
+            <form action="{% url 'loginAuthntication' %}" method ="post">
+                {% csrf_token %}
+                <h1>login</h1>
+                        <input type="email" id="field1"  name="mail" autofocus placeholder="Email" required>
+                    <br><br>
+                        <input type="password" id="field2"  name="pass" placeholder="Password" required>
+                    <br>
+
+                    <p style="color: red; text-align: center;"> {{msg}} </p>
+
+
+                    <input type="submit" value="Log in" id="submitButton">
+            </form>
+            <p>
+               <small> Do not Have an Account ? </small> <a href="{% url 'signUpTemplate' %}" > Register </a>
+            </p>
+        </div>
+    </body>
+    <!-- <script src="{% static 'JS/login.js' %}"></script> -->
+</html>

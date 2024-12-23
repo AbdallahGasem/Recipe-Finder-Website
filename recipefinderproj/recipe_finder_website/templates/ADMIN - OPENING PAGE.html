@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <title> ADMIN EDIT/DELETE </title>
+    <!-- <script src="../javascript/recipe.js"></script> -->
+    <link rel="stylesheet" href="{% static 'CSS/recipeadmin.css' %}"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" /><script src="admin.js"></script>
+    <link rel="stylesheet" href="{% static 'CSS/HATHETA.css' %}">
+</head>
+
+<body>
+
+    <div class="hea">
+        <img class="basla" src="{% static 'Images/Minfa34.jpg' %}" />
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <h1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ADMIN </h1>
+        <ul>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <li><a href="{% url 'adminHome' %}" >Home</a></li>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <li><a href="https://www.facebook.com">Contact Us</a></li>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <li><a href="{% url 'adminFAQ' %}">FAQ</a></li>
+        </ul>
+    </div>
+
+    <a href="{% url 'addRecipeTemplate' %}" ><button id="add">ADD RECIPE</button></a>
+
+
+
+<!-- ---------------------------------------------------------------------------------------------------------------------- -->
+
+<div class="recipe_1">
+
+    {% for r in Recipes %}
+    <h1 class="H"> {{r.name}} </h1>
+
+    <ol id="recipeDetails_m">
+
+        <h3>1-Ingredients:</h3>
+        
+            <ul id="ingredientList_m">
+                <li> {{r.ingredients}} </li>
+            </ul>
+        
+        <h3>2-Instructions:</h3>
+        
+            <ol id="instructionList_m">
+                <li> {{r.instructions}} </li>
+            </ol>
+            <h3> 3- course name </h3>
+            <ul>
+                <li>{{r.course_name}}</li>
+            </ul>
+    </ol>
+
+    <!-- edit and delete buttons are here -->
+    <a href="{% url 'editRecipeTemplate' r.id %}"><button type="button" > edit </button></a>
+    <a href="{% url 'deleteRecipe' r.id %}"><button type="button" > Delete </button></a>
+
+
+    {% endfor %}
+
+
+</div>
+</body>
+</html>

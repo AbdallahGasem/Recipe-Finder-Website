@@ -1,0 +1,78 @@
+*{
+    box-sizing: border-box;
+}
+
+h1{
+    text-align: center;
+}
+
+body{
+    background-image: url("../images/new_img.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+}
+
+
+
+.main_div{
+
+    width: 460px;
+    height: 470px;
+    margin: auto;
+    /* border: solid rgb(203,121,44); */
+    border-radius: 10px;
+
+    padding: 10px;
+    margin-top: 80px;
+    /* box-shadow: h-offset v-offset blur spread color;  */
+    box-shadow: 5px 10px 8px #888888;
+
+    background-color: white;
+    
+    
+    
+}
+
+label{
+    display: inline-block;
+    width: 120px;
+    /* font-size: 15px ; */
+    
+}
+
+input[type=text] , input[type=password] ,input[type=email] {
+    width: 300px;
+    height: 30px;
+    
+}
+
+input[type=submit]{
+    
+    display: block;
+    margin: auto;
+    
+    width: 100px;
+    padding: 10px;
+    margin-bottom: 0px;
+    background-color: rgb(203,121,44);
+    color: white;
+    
+}
+
+input:focus{
+    /* background-color: #f2f2f2; */
+    /* color: gray; */
+    border: solid rgb(203,121,44);
+    outline: none;
+    /* box-shadow: h-offset v-offset blur spread color;  */
+    /* box-shadow: 0px 0px 4px gray ; */
+}
+
+input[type=submit]:hover{
+    background-color: rgb(190,110,35);
+    border-radius: 2px;
+}
+
+
+

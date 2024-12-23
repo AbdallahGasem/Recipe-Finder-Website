@@ -1,0 +1,102 @@
+<!--
+// بسم الله الرحمن الرحيم //
+
+// Program: SignUp Page 
+// Purpose: Recipe finder website
+// Author:  Abdallah Gasem
+// ID :  20221101
+// Date:  19 / 3 / 24
+// Version : 1.0
+
+//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\///\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\ 
+//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\///\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\  -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+    
+    <head>
+        {% load static %}
+        <meta charset="UTF-8">
+        <title>Hat 7eta - SignUp</title>
+        <link rel="stylesheet" href="{% static 'CSS/SignUp_Page.css' %}">
+    </head>
+    
+    <body>
+        
+        
+        <form action="{% url 'addrecord' %}" method="post">
+            {% csrf_token %}
+            <!-- {{ form.as_p }} -->
+            <div class="main_div">
+                <h1>Get Started</h1>
+                <br>
+                
+                {{ form.username }}
+                <label for="uname"> Username </label>
+                <input type="text"  name="uname" id="uname" required autofocus>
+                
+
+                
+                
+                <br>
+                <br>
+                
+                <!-- {{ form.email }} -->
+                <label for="mail">Email &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+                <input type="email" name="mail" id="mail" required>
+            
+                <br>
+                <br>
+                
+                
+                
+                <!-- {{ form.password }} -->
+                <label for="pass">Password</label>
+                <input type="password" name="password" id="pass" minlength="8" maxlength="20" required>
+                
+                <br>
+                <br>
+                
+                <!-- {{ form.confpass }} -->
+                <label for="confpass">Confirm Password</label>
+                <input type="password" name="confpass" id="confpass" minlength="8" maxlength="20" required>
+                
+                <br>
+                
+                <br>
+                    
+                <!-- {{ form.usertype }} -->
+                <label>
+                    <input type="radio" name="option" value="user" class="option">
+                     user
+                </label>
+                <label>
+                    <input type="radio" name="option" value="admin"class="option">
+                     admin
+                </label>
+
+                <br>
+                <br>
+
+                
+                <input type="checkbox" name="terms check" id="terms and conditions" required >
+                <label for="terms and conditions" style="display: inline;">
+                    <small>by pressing you agree to our <a href="terms and conditions.html"> Terms, Privacy Policy and Cookies Policy</a>.</small> 
+                </label>
+                <br>
+                
+                <!-- dj : msg appears if there is an error -->
+                <p style="color: red; text-align: center;">{{ message }}</p>
+                
+                <input type="submit" value="Sign Up" id="submitButton"> 
+                
+                
+            </div>
+            
+        </form>
+        <!-- <script src="{% static 'JS/Sign_Up.js' %}" defer></script> -->
+    </body>
+    
+    </html> 
+

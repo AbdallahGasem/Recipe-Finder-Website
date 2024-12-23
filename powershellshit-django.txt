@@ -1,0 +1,56 @@
+The error you’re encountering is due to PowerShell’s execution policy, which is preventing the script from running. By default, PowerShell is set to restrict the execution of scripts to protect your system from potentially harmful scripts.
+
+To resolve this issue, you can change the execution policy to allow the script to run. Here’s how you can do it:
+
+Open PowerShell as an Administrator.
+Run the following command:
+Set-ExecutionPolicy -ExecutionPolicy RemoteSigned
+
+When prompted, type Y and press Enter to confirm the change.
+This will set the policy to RemoteSigned, which allows scripts to run if they are signed by a trusted publisher or if they are local scripts that are not downloaded from the Internet.
+
+Please note: Changing the execution policy can expose your system to security risks if you run untrusted scripts. Always ensure that the scripts you are running are from a reliable source.
+
+If you prefer not to change the policy for your entire system, you can bypass the execution policy for a single session by running the script with the following command:
+
+powershell -ExecutionPolicy Bypass -File "E:\FCAICU\recipefinder\Scripts\Activate.ps1"
+
+This command temporarily bypasses the execution policy to run your specific script without making permanent changes to the system policy. Remember to replace the file path with the correct path to your Activate.ps1 script.
+
+Learn more
+
+1
+
+stackoverflow.com
+2
+lazyadmin.nl
+3
+majorgeeks.com
+4
+addictivetips.com
+5
+itexperience.net
++3 more
+
+
+You
+how return to normal after i ran this Set-ExecutionPolicy -ExecutionPolicy RemoteSigned
+Copilot
+Using
+the web
+To revert the PowerShell execution policy to its default setting after changing it to RemoteSigned, you can use the following command:
+
+Set-ExecutionPolicy -ExecutionPolicy Restricted -Scope CurrentUser
+
+This command will set the execution policy back to Restricted for the current user, which is the default setting on Windows client computers. The Restricted policy prevents any scripts from running.
+
+If you want to check the current execution policy settings before and after you make the change, you can use:
+
+Get-ExecutionPolicy -List
+
+This will display the execution policies for all scopes. Remember to run PowerShell as an Administrator when changing execution policies.
+
+Note: It’s always a good practice to ensure that your system’s security settings align with your organization’s policies and your personal preferences for script execution.
+
+
+

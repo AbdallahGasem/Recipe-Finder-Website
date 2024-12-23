@@ -1,0 +1,49 @@
+<!-- for membar -->
+<!-- <!DOCTYPE html>
+<html>
+<body>
+
+<h1>Members</h1>
+<table border = 1>
+    {% for x in my_members %}
+    <tr>
+        <td>{{x.id}}</td>
+        <td>{{x.firstname}}</td>
+        <td>{{x.lastname}}</td>
+    </tr>
+
+    {% endfor %}
+
+</table>
+
+</body>
+</html> -->
+
+
+<!-- for USER -->
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>Members</h1>
+<table border = 1>
+    {% for x in my_Users %}
+    <tr>
+        <td>{{x.id}}</td>
+        <td>{{x.username}}</td>
+        <td>{{x.email}}</td>
+        <td>{{x.password}}</td>
+        <td>{{x.usertype}}</td>
+        <td><a href="deleterecord/{{x.id}}"> delete </a></td>
+    </tr>
+
+    {% endfor %}
+
+</table>
+
+</body>
+</html>
+
+<p>
+    <a href="add/"> Add user </a>
+</p>

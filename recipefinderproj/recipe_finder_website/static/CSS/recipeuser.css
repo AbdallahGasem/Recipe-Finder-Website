@@ -1,0 +1,191 @@
+.hea ul{
+    list-style-type:none;
+    width:25%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    align-content: space-between;
+    text-align:center;
+    font-size: 25px;
+    font-weight: bold;
+}
+ul{
+    padding: inline start 20px; ;
+}
+.hea a{
+    text-decoration: none;
+}
+#se{
+    display: flex;
+    height:max-content;
+    width: max-content;
+    align-items: center;
+    justify-content: center;
+    align-content:center;
+    border-radius:28px;
+    padding:14px;
+    background-color:#f6f6f6;
+}
+#search-input{
+    color:#333333;
+    font-size:16px;
+    outline:none;
+    border:none;
+    background-color:transparent;
+}
+ul li a{
+    color: rgb(76, 52, 18);
+}
+ul li a:hover{
+    color:brown;
+    text-decoration:underline;
+}
+h1{
+    font-size:50px;
+    color: rgb(76, 52, 18);
+    letter-spacing: 2px;
+    font-weight: bold;
+    text-shadow: -5px 5px 5px #dfaf7b;
+}
+.basla{
+    height:150px;width:150px;
+    align-self: flex-start;
+    border-radius:50%;
+}
+.hea{
+    flex-direction: row;
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 89%;
+}
+header h1{
+    justify-content: center;
+}
+.grid{
+    display:grid;
+    grid-template-columns:1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    place-items: center;
+}
+.grid img{
+height: 300px;
+width: 400px;
+}
+.grid img:hover{
+   opacity: 0.8;
+    cursor: pointer;
+}
+.grid a{
+    text-decoration: none;
+    font-weight: bold;
+    font-size:18px;
+}
+.grid a:visited{
+     color:brown;
+}
+.grid a:hover{
+     color:rgb(76, 52, 18);
+}
+footer{
+    width:30%;
+    margin-left:200px;
+    font-size:20px;
+}
+#About{
+    margin-top:50px;
+}
+#About p{
+    margin:0;
+}
+#con{
+    border-bottom:2px solid coral;
+    display:inline-block;
+}
+#line{
+    width:60%;
+    font-weight: bold;
+    height:2px;
+    background-color:rgb(76, 52, 18);
+}
+.sub{
+    color: white;
+background-color: rgb(203, 121, 44);
+padding: 10px 20px;
+font-size: 16px;
+transition-duration: 0.4s;
+cursor: pointer;
+border-radius: 8px;
+border: 1px solid rgb(203, 121, 44);
+}
+.sub:hover{
+background-color: rgb(203, 121, 44,0.55);
+color: black;
+border-color: white;
+}
+.hea li{
+    padding:10px;  
+}
+ul{
+      padding-inline-start:15px;
+}
+.fav_imgs{
+    float: left ;
+    margin-right: 20px;
+    width: 170px;
+    height: 170px;
+    border-radius: 5px;
+}
+.favrecipelist{
+    width: 750px;
+    margin: auto;
+      
+}
+.favrecipe{
+    width: 700px;
+    padding: 20px;
+    margin: 10px;
+    position: relative;
+    left:350px ;
+    transition: box-shadow 0.3s ease;
+    height: 170px;
+
+}
+.favrecipe:hover{
+    box-shadow: 0px 22px 57px 0px rgba(61, 45, 24, 0.05);
+    background-color: rgba(61, 45, 24, 0.05);
+}
+.favrecipe p {
+    margin: 0px;
+    margin-right: 10px;
+    margin-top: 5px;
+    
+    margin-bottom: 5px;
+
+}
+.favrecipe .recipe_NAME {
+   font-size: 35px;
+}
+.recipe_course_name{
+    font-size: 25px;
+    padding: 5px 10px;
+
+}
+.submit{
+position: absolute;
+bottom: 100px;
+right: 20px;
+color: white;
+background-color: rgb(203, 121, 44);
+padding: 10px 20px;
+font-size: 20px;
+transition-duration: 0.4s;
+cursor: pointer;
+border-radius: 8px;
+border: 1px solid rgb(203, 121, 44);
+}
+.submit:hover{
+background-color: rgb(203, 121, 44,0.55);
+color: black;
+border-color: white;
+}
